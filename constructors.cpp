@@ -14,7 +14,7 @@ public:
     {
         std::cout << "Parameter int constructor" << std::endl;
     }
-    A(std::initializer_list<double> num) : number(num)
+    A(double num) : number(num)
     {
         std::cout << "Parameter double constructor" << std::endl;
     }
@@ -29,7 +29,7 @@ public:
 
 private:
     int getNumber(){return number;} // to avoid warning
-    int number;
+    double number;
 };
 
 int main()
