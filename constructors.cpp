@@ -6,6 +6,10 @@ class A
 public:
     virtual ~A() = default;
     
+    A() : number(5)
+    {
+        std::cout << "Default constructor" << std::endl;
+    }
     A(int num) : number(num)
     {
         std::cout << "Parameter constructor" << std::endl;
@@ -20,6 +24,7 @@ public:
     }
 
 private:
+    int getNumber(){return number;} // to avoid warning
     int number;
 };
 
