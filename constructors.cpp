@@ -10,6 +10,10 @@ public:
     {
         std::cout << "Default constructor" << std::endl;
     }
+    A(const A&)
+    {
+        std::cout << "Copy constructor A" << std::endl;
+    }
     A(A&&)
     {
         std::cout << "Move constructor A" << std::endl;
