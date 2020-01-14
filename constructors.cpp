@@ -12,7 +12,11 @@ public:
     }
     A(int num) : number(num)
     {
-        std::cout << "Parameter constructor" << std::endl;
+        std::cout << "Parameter int constructor" << std::endl;
+    }
+    A(double num) : number(num)
+    {
+        std::cout << "Parameter double constructor" << std::endl;
     }
     A(const A&)
     {
@@ -33,5 +37,7 @@ int main()
     A a;
     A b = a;
     A c = std::move(a);
+    A d(4);
+    A e(5.0);
     return 0;
 }
