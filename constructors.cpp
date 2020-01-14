@@ -14,6 +14,10 @@ public:
     {
         std::cout << "Copy constructor A" << std::endl;
     }
+    A(A&&)
+    {
+        std::cout << "Move constructor A" << std::endl;
+    }
 };
 
 int main()
