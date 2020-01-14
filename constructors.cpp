@@ -10,11 +10,11 @@ public:
     {
         std::cout << "Default constructor" << std::endl;
     }
-    A(std::initializer_list<int> num) : number(num)
+    A(int num) : number(num)
     {
         std::cout << "Parameter int constructor" << std::endl;
     }
-    A(double num) : number(num)
+    A(std::initializer_list<double> num) : number(num)
     {
         std::cout << "Parameter double constructor" << std::endl;
     }
