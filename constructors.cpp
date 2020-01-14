@@ -41,6 +41,10 @@ public:
     {
         std::cout << "Default B constructor" << std::endl;
     }
+    B(const B&)
+    {
+        std::cout << "Copy B constructor" << std::endl;
+    }
 };
 
 int main()
@@ -54,5 +58,6 @@ int main()
     A g{5.0};
     std::cout << "Class B" << std::endl;
     B aa;
+    B bb = aa;
     return 0;
 }
