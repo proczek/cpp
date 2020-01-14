@@ -1,5 +1,6 @@
 //clang constructors.cpp -Wall -Wdeprecated -lstdc++ --std=c++2a
 #include <iostream>
+#include <vector>
 
 class A
 {
@@ -10,7 +11,7 @@ public:
     {
         std::cout << "Default constructor" << std::endl;
     }
-    A(int num) : number(num)
+    A(std::initializer_list<int> num) : numbers(num)
     {
         std::cout << "Parameter int constructor" << std::endl;
     }
@@ -29,7 +30,9 @@ public:
 
 private:
     int getNumber(){return number;} // to avoid warning
+    std::vector<int> getNumbers() {return numbers;} //to avoid warning
     int number;
+    std::vector<int> numbers;
 };
 
 int main()
