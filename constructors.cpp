@@ -10,7 +10,7 @@ public:
     {
         std::cout << "Default constructor" << std::endl;
     }
-    A(int num) : number(num)
+    A(std::initializer_list<int> num) : number(num)
     {
         std::cout << "Parameter int constructor" << std::endl;
     }
