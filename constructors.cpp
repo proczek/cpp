@@ -39,6 +39,17 @@ private:
     std::vector<double> numbers;
 };
 
+class B : public A
+{
+public:
+    virtual ~B() = default;
+
+    B()
+    {
+        std::cout << "Default B constructor" << std::endl;
+    }
+};
+
 int main()
 {
     A a;
@@ -48,5 +59,7 @@ int main()
     A e(5.0);
     A f{5};
     A g{5.0};
+    std::cout << "Class B" << std::endl;
+    B aa;
     return 0;
 }
