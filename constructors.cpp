@@ -48,7 +48,7 @@ public:
     {
         std::cout << "Default B constructor" << std::endl;
     }
-    B(const B&)
+    B(const B& b) : A(b)
     {
         std::cout << "Copy B constructor" << std::endl;
     }
