@@ -5,6 +5,11 @@ class A
 {
 public:
     virtual ~A() = default;
+    
+    A()
+    {
+        std::cout << "Default constructor" << std::endl;
+    }
     A(const A&)
     {
         std::cout << "Copy constructor A" << std::endl;
