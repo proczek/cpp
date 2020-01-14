@@ -20,5 +20,6 @@ int main()
 {
     A a;
     A b = a;
+    A c = std::move(a);
     return 0;
 }
