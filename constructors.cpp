@@ -6,9 +6,9 @@ class A
 public:
     virtual ~A() = default;
     
-    A()
+    A(int num) : number(num)
     {
-        std::cout << "Default constructor" << std::endl;
+        std::cout << "Parameter constructor" << std::endl;
     }
     A(const A&)
     {
@@ -18,6 +18,9 @@ public:
     {
         std::cout << "Move constructor A" << std::endl;
     }
+
+private:
+    int number;
 };
 
 int main()
