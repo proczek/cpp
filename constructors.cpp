@@ -11,13 +11,17 @@ public:
     {
         std::cout << "Default constructor" << std::endl;
     }
-    A(std::initializer_list<int> num) : numbers(num)
+    A(int num) : number(num)
     {
         std::cout << "Parameter int constructor" << std::endl;
     }
     A(double num) : number(num)
     {
         std::cout << "Parameter double constructor" << std::endl;
+    }
+    A(std::initializer_list<double> num) : numbers(num)
+    {
+        std::cout << "std::initializer list double constructor" << std::endl;
     }
     A(const A&)
     {
@@ -30,9 +34,9 @@ public:
 
 private:
     int getNumber(){return number;} // to avoid warning
-    std::vector<int> getNumbers() {return numbers;} //to avoid warning
+    std::vector<double> getNumbers() {return numbers;} //to avoid warning
     int number;
-    std::vector<int> numbers;
+    std::vector<double> numbers;
 };
 
 int main()
