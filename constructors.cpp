@@ -52,7 +52,7 @@ public:
     {
         std::cout << "Copy B constructor" << std::endl;
     }
-    B(B&& b) : A(b)
+    B(B&& b) : A(std::move(b))
     {
         std::cout << "Move B constructor" << std::endl;
     }
