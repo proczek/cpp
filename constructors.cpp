@@ -9,5 +9,6 @@ public:
 int main()
 {
     A a;
+    A b = a;
     return 0;
 }
