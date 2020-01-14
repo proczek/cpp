@@ -39,5 +39,7 @@ int main()
     A c = std::move(a);
     A d(4);
     A e(5.0);
+    A f{5};
+    A g{5.0};
     return 0;
 }
