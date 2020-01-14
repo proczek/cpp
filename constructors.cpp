@@ -45,6 +45,10 @@ public:
     {
         std::cout << "Copy B constructor" << std::endl;
     }
+    B(B&& b) : A(b)
+    {
+        std::cout << "Move B constructor" << std::endl;
+    }
 };
 
 int main()
@@ -59,5 +63,6 @@ int main()
     std::cout << "Class B" << std::endl;
     B aa;
     B bb = aa;
+    B cc = std::move(bb);
     return 0;
 }
